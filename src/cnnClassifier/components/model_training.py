@@ -24,7 +24,7 @@ class Training:
         self.valid_generator = valid_datagenerator.flow_from_directory(
             directory=self.config.training_data,
             subset="validation",
-            shuffle=True,
+            shuffle=False,
             **dataflow_kwargs,
         )
         if self.config.params_is_augmentation:
